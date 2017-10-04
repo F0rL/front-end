@@ -1,0 +1,42 @@
+/*style.css*/
+body {
+	background-color: SlateGray;
+	background-image: url(http://www.daoyouz.com/picture/abed28443746d19e427bae2564cc19a4.jpg);
+}
+h1{
+		text-align: center;
+		text-shadow: 3px 3px 3px #00BFFF;
+		color: #F8F8FF;
+}
+
+table{
+	table-layout: fixed;
+	width: 100%;
+	border-collapse:collapse;
+	border: 3px solid Black;
+}
+
+table,th,td{
+	border: 2px solid Black;
+}
+
+thead{
+	height: 100px;
+	background-color: #336699;
+	color: White
+}
+tbody th{
+	height: 80px;
+	background-color: #990033;
+}
+tbody td{
+	background-color: #CCCCCC;
+}
+
+td,th{
+	text-align: center;
+}
+
+p{
+	color: #FF0000;
+}
