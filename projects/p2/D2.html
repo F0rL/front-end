@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo2</title>
+  <style>
+    .link{
+      width: 600px;
+      margin: 0 auto;      
+    }
+
+    .link>div{
+      margin-top: 30px;
+    }
+
+    .button{
+      display: inline-block;
+      padding: 8px 10px;
+      text-decoration: none;/*去掉链接自带的下划线*/
+      color: #000;
+      border-radus: 3px;
+      cursor: pointer;/*定义鼠标指针放在一个元素边界范围内时所用的光标形状*/
+      transition: all .3s;/*定义鼠标指针移动元素上动画完成时间*/
+    }
+
+    .button:hover{
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+      /*定义动画具体效果*/
+    }
+
+    .steal{
+      background-color: #009688;
+      color: #fff;
+    }
+
+    .yellow{
+      background-color: #ffeb3b;
+    }
+
+    .orange{
+      background-color: #ff9800;
+    }
+
+    .red{
+      background-color: #f44336;
+      color: #fff;
+    }
+
+    .green{
+      background-color: #4CAF50;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+	<div class="link">
+    <a href="#" class="button steal">steal</a>
+    <a href="#" class="button yellow">yellow</a>
+    <a href="#" class="button orange">orange</a>
+    <a href="#" class="button red">red</a>
+    <a href="#" class="button green">green</a> 
+  </div>
+</body>
+</html>
