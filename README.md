@@ -1,4 +1,3 @@
-# RESUME
 ## __XIONG fang__
 ### __E-mail__ : kumaloveslife@gmail.com
 ### __Education__ : Bachelor
