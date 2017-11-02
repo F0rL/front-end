@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bubble</title>
+	<style>
+  body {
+    position: absolute;
+    left: 50%;
+    margin-left: -150px;
+  }
+    .layout1,
+    .layout2,
+    .layout3 {
+      position: relative;
+    }
+
+    .content {
+      width: 200px;
+      height: 100px;
+      display: inline-block;
+      border: 2px solid #E9E9E9;
+      position: relative;
+      margin: 20px 0;
+    }
+
+    .layout1::before {
+      content: '';
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-top: 10px solid #fff;
+      border-left: 10px solid #fff;
+      border-right: 10px solid #fff;
+      border-bottom: 10px solid #888;
+      position: absolute;
+      left: 20px;
+      top: 2px;
+      z-index: 1;
+    }
+
+    .layout2::before {
+      content: '';
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-top: 10px solid #fff;
+      border-left: 10px solid red;
+      border-right: 10px solid #fff;
+      border-bottom: 10px solid #fff;
+      position: absolute;
+      transform: rotateZ(-45deg);
+      left: 194px;
+      top: 10px;
+      z-index: 1;
+    }
+
+    .layout3::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-left: 1px solid #E9E9E9;
+      border-top: 1px solid #E9E9E9;
+      background: #fff;
+      display: inline-block;
+      transform: rotateZ(45deg);
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      z-index: 1;
+    } 		
+	</style>
+</head>
+<body>
+  <div class="layout1">
+    <div class="content"></div>
+  </div>
+  <div class="layout2">
+    <div class="content"></div>
+  </div>
+  <div class="layout3">
+    <div class="content"></div>
+  </div></body>
+</html>
