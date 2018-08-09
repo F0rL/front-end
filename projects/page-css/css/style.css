@@ -1,0 +1,355 @@
+/* css rerset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+/* common css */
+html, body {
+  height: 100%;
+}
+body {
+  font: 14px/1.5 Arial;
+  background-color: #fff;
+}
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.layout {
+  margin: 0 auto;
+}
+.button {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #fed136;
+  padding: 15px 10px;
+  border-radius: 8px;
+}
+.button:hover {
+  background-color: green;
+}
+
+/*icon css*/
+.icon {
+  width: 1em; 
+  height: 1em;
+  font-size: 100px;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+.icon {
+  font-size: 40px;
+  color: black;
+}
+.icon-change:hover {
+  color: #fed136;
+}
+section .main-intro .icon {
+  font-size: 80px;
+}
+
+/* header css */
+header {
+  height: 100%;
+  min-height: 600px;
+  background: #000 url(../img/background/header-bg.jpg) no-repeat center;
+  background-size: cover;
+}
+header .start {
+  color: #fed136;
+  font-size: 32px;
+  float: left;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+header .nav {
+  float: right;
+  margin-top: 20px;
+  margin-right: 30px;
+}
+header .nav > li {
+  float: left;
+}
+header .nav a {
+  display: block;
+  padding: 5px;
+  color: #fff;
+  font-size: 16px;
+}
+header .nav a:hover {
+  color: #fed136;
+}
+header .intro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+header .intro h1 {
+  font-size: 40px;
+}
+header .intro h2 {
+  font-size: 60px;
+  margin: 10px 0 40px 0;
+}
+
+/*main css */
+section {
+  margin: 20px 0;
+  padding: 100px 200px;
+  text-align: center;
+  overflow: hidden;
+}
+section > h2 {
+  font-size: 42px;
+}
+section > p {
+  font-style: italic; 
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 50px;
+}
+section > .main-intro > li {
+  margin-top: 20px;
+  float: left;
+  width: 33.33%;
+  padding: 30px;
+}
+section > main-intro >li > p {
+  font-size: 16px;
+  color: #aaa;
+  margin-top: 10px;
+}
+section > figure > h2 {
+  font-size: 42px;
+}
+section > figure > p {
+  font-style: italic; 
+  font-size: 18px;
+  color: #aaa; 
+}
+
+/*PORTFOLIO css*/
+.back-color {
+  height: 100%;
+  min-height: 600px;
+  background-color: #eee;
+}
+section > .design figure {
+  float: left;
+  width: calc(33.33% - 40px);
+  margin: 20px;
+  background-color: #fff;
+}
+section > .design a {
+  display: block;
+}
+section > .design img {
+  max-width: 100%;
+  height: auto;
+}
+section > .design figcaption {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+section > .design > figure > p {
+  color: #aaa;
+  font-style: italic; 
+  margin-bottom: 20px;
+}
+/*PORTFOLIO hover css*/
+figure a {
+  position: relative;
+  font-size: 0;
+}
+figure a .icon {
+  color: #fff;
+  font-size: 50px;
+}
+figure .dessign-hover {
+  position: absolute;
+  color: #fff;
+  background-color: rgba(254, 209, 54, .9);
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: all ease .5s;
+}
+figure .dessign-hover:hover {
+  opacity: 1;
+}
+figure .dessign-hover .icon {
+  vertical-align: middle;
+}
+figure .dessign-hover:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+/*ABOUT css*/
+section > .line > li::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+section > .line > li {
+  position: relative;
+  margin-top: 80px; 
+}
+section > .line img,
+section > .line .img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 5px solid #ccc;
+}
+section > .line > li:nth-child(odd) {
+  padding-right: calc(50% - 80px);
+  text-align: right;
+}
+section > .line li:nth-child(odd) dl {
+  margin-right: 200px;
+}
+section > .line > li:nth-child(odd) img {
+  float: right;
+}
+section > .line > li:nth-child(even) {
+  padding-left: calc(50% - 80px);
+  text-align: left; 
+}
+section > .line > li:nth-child(even) dl{
+  margin-left: 200px;
+}
+section > .line > li:nth-child(even) img {
+  float: left;
+}
+section .line dt {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 2px;
+}
+section .line dd:nth-of-type(1) {
+  color: #aaa;
+}
+section .line > li::before {
+  content: '';
+  position: absolute;
+  top: 160px;
+  left: 50%;
+  display: inline-block;
+  height: 100px;
+  width: 3px;
+  background-color: #ccc;
+}
+section > .line > li:last-child::before {
+  height: 0;
+}
+section > .line .img {
+  display: inline-block;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  padding-top: 48px;
+  background-color: #fed136;
+}
+
+/*member css*/
+section > .member > li {
+  float: left;
+  width: calc(33.33% - 20px);
+  margin: 10px;
+}
+section > .member img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid #ccc;
+  margin-bottom: 20px;
+}
+section > .member p {
+  color: #aaa;
+}
+section > span {
+  display: inline-block;
+  color: #aaa;
+  font-size: 16px;
+  width: 800px;
+  margin-top: 50px;
+}
+
+section > .member a {
+  margin: 10px;
+}
+
+/*logo css*/
+main > .logo {
+  padding: 0;
+}
+section > a > img {
+  margin: 0 40px;
+}
+
+/*info css*/
+main > .info h2 {
+  color: #fff;
+}
+.info {
+  height: 100%;
+  min-height: 600px;
+  min-width: 1600px;
+  background: #333 url(../img/background/map-image.png) no-repeat center;
+  background-size: cover;
+}
+section > .form {
+  float: left;
+}
+section > .info-message {
+  float: right;
+}
+section input {
+  width: 550px;
+  height: 60px;
+  margin-top: 10px;
+}
+section > .info-message input {
+  height: 200px;
+}
+.info input {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.info .info-button {
+  margin-top: 300px;
+}
+
+/*footer css*/
+.row {
+  min-width: 1200px;
+  height: 100px;
+  text-align: center;
+}
+.col {
+  display: inline-block;
+  margin: 10px 100px;
+}
+footer > .row > .col > a {
+  color : #fed136;
+  padding: 0 10px;
+}
