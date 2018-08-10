@@ -254,7 +254,7 @@ section .line > li::before {
   top: 160px;
   left: 50%;
   display: inline-block;
-  height: 100px;
+  height: 500px;
   width: 3px;
   background-color: #ccc;
 }
