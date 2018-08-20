@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>实现效果DOM</title>
+  <style>
+    .box {
+      border: 2px solid #ccc;
+      padding: 10px;
+      box-shadow: 1px 2px 2px 1px rgba(0,0,0,0.14);
+    }
+    .active {
+      background-color: #000;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>hello</h1>
+    <p>world</p>
+  </div>
+  <div>
+    <button class="btn-add">add</button>
+    <button class="btn-remove">remove</button>
+    <button class="btn-toggle1">toggle1</button>
+    <button class="btn-toggle2">toggle2</button>
+  </div>
+  <script>
+    function $(selector){
+      return document.querySelector(selector);
+    }
+    $('.btn-add').onclick = function(){
+      $('.box').classList.add('active')
+    }
+    $('.btn-remove').onclick = function(){
+      $('.box').classList.remove('active')
+    }
+    $('.btn-toggle1').onclick = function(){
+      if ($('.box').classList.contains('active')){
+        $('.box').classList.remove('active')
+      }else{
+        $('.box').classList.add('active')
+      }
+    }//先判断再执行
+    $('.btn-toggle2').onclick = function(){
+      $('.box').classList.toggle('active')
+    }//直接调用
+  </script>
+</body>
+</html>
