@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>自定义事件</title>
+  <style>
+    .box {
+      width: 400px;
+      height: 100px;
+      border: 2px solid #000;
+    }
+  </style>
+</head>
+<body>
+	<div class="box box1">
+   <input type="text"> 
+  </div>
+  <div class="box box2"></div>
+  <script>
+    var EventCenter = {
+      on: function(type, handler){
+        document.addEventListener(type, handler)
+      },
+      fire: function(type, data){
+        return document.dispatchEvent(new CustomEvent(type, {
+          detail: data
+        }))
+      }
+    }
+
+    document.querySelector('.box1 input').oninput = function(){
+      EventCenter.fire('box1input', this.value)
+    }
+    EventCenter.on('box1input', function(e){
+      document.querySelector('.box2').innerText = e.detail
+    })
+  </script>
+  <!-- 
+  在输入框输入文本，box2里面也会出现相同文本，CustomEvent兼容性不好，仅用于演示自定义事件。
+  组件1内只有操作的描述，发送一个事件。组件2监听到事件，再做出改变。两者不互相操作（解耦）。 -->
+</body>
+</html>

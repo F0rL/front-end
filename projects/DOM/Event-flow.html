@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event-Flow-Demo</title>
+  <style>
+    .container,
+    .box,
+    .target {
+      border: 1px solid;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">box
+      <div class="target">target</div>
+    </div>
+  </div>
+
+  <script>
+    function $(selector) {
+      return document.querySelector(selector);
+    }
+
+    $('.target').addEventListener("click",function(e){
+      console.log('我是target  处于捕获阶段');
+    },true);
+    $('.box').addEventListener("click",function(e){
+    //   e.stopPropagation(); //阻止传播
+      console.log('我是box  处于捕获阶段');
+    },true);
+    $('.container').addEventListener("click",function(e){
+      console.log('我是container  处于捕获阶段');
+    },true);
+
+
+    $('.target').addEventListener("click",function(e){
+      console.log('我是target  处于冒泡阶段');
+    },false);
+    $('.box').addEventListener("click",function(e){
+    //      e.stopPropagation();  //阻止传播
+      console.log('我是box  处于冒泡阶段');
+    },false);
+    $('.container').addEventListener("click",function(e){
+      console.log('我是container  处于冒泡阶段');
+    },false);
+  </script>
+</body>
+</html>
