@@ -14,7 +14,7 @@
   <main>
     <div class="flip-model login">
       <div class="model model-login">
-        <a href="#" class="close"><i class="fa fa-close"></i></a>
+        <a href="#" class="close fa fa-close"></a>
         <div class="tabs">
           <a href="#" class="login active">登录</a>
           <a href="#" class="register">注册</a>
@@ -118,7 +118,7 @@
       // window.target = e.target
       if(e.target.classList.contains('close')){
         $('.flip-model').style.display = 'none'
-      }
+      }  //点击×，关闭。如果对应元素内部有子元素，容易点击到子元素，子元素没有绑定事件，出现错误。
     })
 
     document.addEventListener('click', function(){
