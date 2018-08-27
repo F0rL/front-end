@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <title>tab-jQuery</title>
+  <style>
+    * {
+      box-sizing: boder-box;
+    }
+    .box{
+      margin-top: 50px;
+    }
+
+    .box .header .tab {
+      float: left;
+      border-left: 1px solid #666;
+      border-top: 1px solid #666;
+      padding: 5px 20px;
+      background-color: #ddd;
+      cursor: pointer;
+    }
+    .box .header .tab:last-child{
+      border-right:1px solid #666;
+    }
+    .box .header .tab.active{
+      background-color: #fff;
+      border-bottom:1px solid #fff;
+      margin-bottom: -1px;
+    }
+
+
+    .box .header::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    .box .content {
+      width: 300px;
+      height: 200px;
+      background-color: #fff;
+     border: 1px solid #666;
+    }
+    .content .pannel {
+      width: 300px;
+      height: 200px;
+      background-color: #fff;
+      display: none;
+    }
+    .content .pannel.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="header">
+      <div class="tab active">1</div>
+      <div class="tab">2</div>
+      <div class="tab">3</div>
+      <div class="tab">4</div>
+    </div>
+    <div class="content">
+      <div class="pannel active">pannel1</div>
+      <div class="pannel">pannel2</div>
+      <div class="pannel">pannel3</div>
+      <div class="pannel">pannel4</div>
+    </div>
+  </div>
+   <div class="box">
+     <div class="header">
+       <div class="tab">1</div>
+       <div class="tab">2</div>
+       <div class="tab active">3</div>
+       <div class="tab">4</div>
+     </div>
+     <div class="content">
+       <div class="pannel">pannel1</div>
+       <div class="pannel">pannel2</div>
+       <div class="pannel active">pannel3</div>
+       <div class="pannel">pannel4</div>
+     </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.box .tab').forEach(function(node){
+      node.addEventListener('click',function(){
+        var content = this.parentElement.nextElementSibling
+        var index
+        this.parentElement.querySelectorAll('.tab').forEach(function(tab,idx){
+          tab.classList.remove('active')
+          if(node === tab){
+            index = idx
+          }
+            
+        })
+        this.classList.add('active')
+        content.querySelectorAll('.pannel').forEach(function(pannel){
+          pannel.classList.remove('active')
+        })
+        content.querySelectorAll('.pannel')[index].classList.add('active')
+      })
+    })
+  </script>
+</body>
+</html>
