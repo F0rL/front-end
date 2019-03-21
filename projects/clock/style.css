@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+    
+body{
+  margin:0; 
+  height:100vh; 
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: radial-gradient(circle, #EEEFE7, #655e5d);
+}
+
+/* canvas {
+  border: 1px solid #eee;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+canvas {
+  margin-right: 200px;
+}
+
+
+/* 表盘数字 */
+
+.clock{
+  min-width:400px;
+  min-height:400px;
+  background:#2b2726;
+  border:1px solid transparent;
+  border-radius:50%;
+  position:relative;
+  box-shadow:0 10px 10px #3e5258;
+  
+}
+
+.clock::before{
+  position:absolute;
+  left:70px;
+  top:70px;
+  width:260px;
+  height:260px;
+  border-radius:50%;
+  content:'';
+  box-shadow:0 3px 5px #c1b8b6 inset;
+}
+
+.clock > .number{
+  font-size:25px;
+  color:#f77754;
+}
+
+.clock .number12{
+  position:absolute;
+  top:3px;
+  left:185px;
+}
+
+.clock .number3{
+  position:absolute;
+  right:9px;
+  top:185px;  
+}
+
+.clock .number6{
+  position:absolute;
+  bottom:3px;
+  left:192px;
+}
+
+.clock .number9{
+  position:absolute;
+  top:185px;
+  left:9px;
+}
+
+/* 表盘内部 */
+
+.clock > .inner_circle{
+  width:260px;
+  height:260px;
+  border:1px solid transparent;
+  border-radius:50%;
+  position:absolute;
+  left:70px;
+  top:70px;
+  background:#0a516d;
+}
+
+
+.clock > .pointer > .shadow{
+   filter:drop-shadow(4px 4px 2px #888888)
+}
+
+.clock > .pointer .hour_hand{
+  position:absolute;
+  top:90px;
+  left:196px;
+  width: 12px;
+  border-bottom: 140px solid #f77754;
+  border-right: 4px solid transparent;  
+  border-left: 4px solid transparent;
+  border-radius:3px;
+  transform-origin:50% 110px;
+  transform:rotate(40deg);
+} 
+
+.clock >.pointer .minute_hand{
+  position:absolute;
+  top:50px;
+  left:196px;
+  width: 8px;
+  border-bottom: 200px solid #f77754;
+  border-right: 4px solid transparent;  
+  border-left: 4px solid transparent;
+  border-radius:3px;
+  transform-origin:50% 150px;
+  transform:rotate(-70deg);
+  
+}
+
+.clock > .pointer .second_hand{
+  position:absolute;
+  left:50%;
+  top:30px;
+  border:1px solid #E97B65;
+  height:230px; 
+  transform-origin:50% 170px;
+  transform:rotate(100deg)
+}
+
+.clock > .pointer >.dot1{
+  position:absolute;
+  background:#EEEFE7;
+  /* border:2px solid #EEEFE7; */
+  border-radius:50%;
+  width:10px;
+  height:10px;
+  left:195px;
+  top:195px;
+  box-shadow:0 -2px 4px #242323 inset;
+}
